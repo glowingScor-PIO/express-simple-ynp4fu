@@ -73,7 +73,8 @@ app.post('/create', (req, res) => {
     });
 });
 
-app.post('/update', (req, res) => {
+// can use 'put' as well???
+app.patch('/update', (req, res) => {
     console.log(req.body);
     form = req.body;
     let sql = 'UPDATE ProdMaster SET Price = ' ${form.price} ' WHERE id = ' + ${form.id});
@@ -84,7 +85,7 @@ app.post('/update', (req, res) => {
     });
 });
 
-app.post('/delete', (req, res) => {
+app.delete('/delete', (req, res) => {
     console.log(req.body);
     form = req.body;
     let sql = 'DELETE FROM ProdMaster WHERE id = ' + ${form.id});
